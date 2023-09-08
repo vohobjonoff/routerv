@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
-import Users from "./components/Users";
 import Home from "./components/Home";
-import User from "./components/User";
+import Single from "./components/Single";
 
 
 function App() {
@@ -13,8 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/"  element={<Home />} />
-        <Route path="/users"  element={<Users />} />
-        <Route path="/user/:id"  element={<User />} />
+        <Route path="single/:id"  element={<Single />} />
       </Routes>
 
     </>

@@ -1,7 +1,12 @@
 import React from 'react'
+import Users from './Users';
 
 export default function Home() {
+
+
   return (
-    <div>Home</div>
+      <div>
+          <Users />
+    </div>
   )
 }

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useGlobalContext } from '../context'
-import { Link } from 'react-router-dom'
+import User from './User'
 
 
 export default function Users() {
@@ -9,13 +9,9 @@ export default function Users() {
   return (
       <div>
           {data.map((item) => {
-              const { id } = item;
+              
               return (
-                  <>
-                      <Link to={`user/${id}`} >
-                          <div key={id}>{item.name}</div>
-                      </Link>
-                </>
+                  <User key={item.id} {...item} />
               )
           })}
     </div>

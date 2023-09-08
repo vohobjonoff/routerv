@@ -1,9 +1,16 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 
 
 
-export default function User() {
-    const { id } = useParams();
-    return <div>{id}</div> 
+export default function User({id,name}) {
+    return (
+        <>
+            <h2>{name}</h2>
+
+            <Link to={`./single/${id}`} >
+            details
+            </Link>
+        </>
+    ) 
 }
